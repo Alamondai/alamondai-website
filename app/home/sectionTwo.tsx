@@ -15,12 +15,11 @@ import { services } from '../data/services';
 
 export default function SectionTwo() {
   return (
-    <div className="flex flex-col gap-10 pt-14 bg-[#F9F9FF]">
+    <div className="flex flex-col md:gap-10 pt-14 bg-[#F9F9FF] px-4 md:px-0">
       {/* Title */}
       <div className="self-center text-4xl font-bold text-gray-900 whitespace-nowrap leading-[54.95px]">
         Services we offer
       </div>
-
       {/* Content */}
       <div className='w-full h-full'>
         <Swiper
@@ -36,9 +35,25 @@ export default function SectionTwo() {
             delay: 2500,
             disableOnInteraction: false,
           }}
-
+          breakpoints={{
+            '@0.00': {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+            '@0.75': {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            '@1.00': {
+              slidesPerView: 3,
+              spaceBetween: 40,
+            },
+            '@1.50': {
+              slidesPerView: 4,
+              spaceBetween: 50,
+            },
+          }}
           className="mySwiper">
-
           {services.map((items) => (
             <SwiperSlide
               key={items.id}>
@@ -78,14 +93,10 @@ export default function SectionTwo() {
                   </div>
                 </div>
               )}
-
             </SwiperSlide>
           ))}
-
         </Swiper>
       </div>
-
-
     </div>
   )
 }

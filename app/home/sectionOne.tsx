@@ -22,6 +22,7 @@ export default function SectionOne() {
           </button>
         </div>
       </div>
+
       {/* Right Section */}
       <div className='w-full h-full'>
         <Image
@@ -30,7 +31,6 @@ export default function SectionOne() {
           alt="Hero Image"
         />
       </div>
-
     </div>
   )
 }
