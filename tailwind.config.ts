@@ -10,6 +10,12 @@ const config: Config = {
     extend: {
       fontFamily: {
         Roboto: ["Roboto", "sans-serif"],
+      },
+      colors: {
+        primary: "#3989B3",
+        secondary: "#25AE71",
+        third: "#33949E",
+        fourth: "#4D65F3"
       }
     },
   },
