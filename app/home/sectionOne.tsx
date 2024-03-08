@@ -6,7 +6,7 @@ import heroImage from '../assets/images/home/hero.png';
 
 export default function SectionOne() {
   return (
-    <div className='w-full h-full grid grid-cols-1 md:grid-cols-2 gap-10 py-10 md:py-20 px-5 md:px-20'>
+    <div className='w-full h-full relative grid grid-cols-1 md:grid-cols-2 gap-10 py-10 md:py-20 px-5 md:px-20'>
       {/* Left Section */}
       <div className='w-full h-full flex flex-col gap-5 md:gap-8 items-start justify-center'>
         <div className='flex flex-col gap-1 md:gap-5 text-4xl md:text-5xl'>
@@ -30,6 +30,8 @@ export default function SectionOne() {
           src={heroImage}
           alt="Hero Image"
         />
+      </div>
+      <div className='w-20 h-20 absolute -bottom-20 left-[35%] rounded-full z-5 bg-gradient-to-tr from-primary via-secondary to-fourth'>
       </div>
     </div>
   )

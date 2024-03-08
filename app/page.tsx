@@ -8,6 +8,11 @@ export default function Home() {
       <SectionOne />
       <SectionTwo />
       <SectionThree />
+
+
+      <div className="h-40">
+
+      </div>
     </main>
   );
 }
