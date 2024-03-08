@@ -18,7 +18,7 @@ export default function SectionOne() {
         </div>
         <div>
           <button className='px-2 py-2 md:px-5 md:py-3 text-sm md:text-base rounded text-white bg-third'>
-            Let's get Started!
+            {"Let's get Started!"}
           </button>
         </div>
       </div>
