@@ -31,10 +31,7 @@ export default function SectionTwo() {
           slidesPerView={4}
           loop={true}
           centeredSlides={true}
-          autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
-          }}
+
           breakpoints={{
             '@0.00': {
               slidesPerView: 1,
