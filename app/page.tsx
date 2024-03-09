@@ -1,3 +1,4 @@
+import SectionFour from "./home/sectionFour";
 import SectionOne from "./home/sectionOne";
 import SectionThree from "./home/sectionThree";
 import SectionTwo from "./home/sectionTwo";
@@ -8,7 +9,7 @@ export default function Home() {
       <SectionOne />
       <SectionTwo />
       <SectionThree />
-
+      <SectionFour />
 
       <div className="h-40">
 
