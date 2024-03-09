@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Header from "./layouts/Header";
+import Footer from "./layouts/Footer";
 
 
 export const metadata: Metadata = {
@@ -34,14 +35,14 @@ export const metadata: Metadata = {
     'Ethiopia Software Development',
     'Ethiopia Software Development Company',
   ],
-  creator: 'Natnael Engeda',
+  creator: 'Alamondai',
   authors: [
     {
-      name: 'Natnael Engeda',
+      name: 'Alamondai',
       url: 'https://portfolio.alamondai.com'
     }
   ],
-  publisher: "Natnael Engeda",
+  publisher: "Alamondai",
   openGraph: {
     title: 'Alamondai',
     description: "Software Development - Website Development and Mobile App Development",
@@ -106,6 +107,7 @@ export default function RootLayout({
       <body className='font-Roboto'>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

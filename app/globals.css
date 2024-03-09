@@ -18,6 +18,14 @@
   .transition-main {
     @apply transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300
   }
+
+  .techStackTabHead {
+    @apply text-xl text-gray-800 hover:font-bold cursor-pointer;
+  }
+
+  .techStackTabHeadActive {
+    @apply text-xl text-third font-bold cursor-pointer;
+  }
 }
 
 * {
