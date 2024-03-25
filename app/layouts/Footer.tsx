@@ -73,7 +73,9 @@ export default function Footer() {
                       href={'/about'}
                       className="mt-6">About us</Link>
                     <div className="mt-3">Blog</div>
-                    <div className="mt-3">Contact us</div>
+                    <Link
+                      href={'/contact'}
+                      className="mt-3">Contact us</Link>
                     <div className="mt-3">Pricing</div>
                     <div className="mt-3">Testimonials</div>
                   </div>
