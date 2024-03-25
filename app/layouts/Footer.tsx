@@ -37,12 +37,12 @@ export default function Footer() {
                 All rights reserved
               </div>
               <div className="flex gap-4 pr-20 mt-10 max-md:pr-5">
-                <img
-                  loading="lazy"
+                {/* <Image
+                  alt='Facebook'
                   src="https://cdn.builder.io/api/v1/image/assets/TEMP/98011fa7b6954b38308ac43b77bed6671caff34918de459957ce80f3efc56180?"
                   className="shrink-0 w-8 aspect-square"
-                />
-                <img
+                /> */}
+                {/* <img
                   loading="lazy"
                   src="https://cdn.builder.io/api/v1/image/assets/TEMP/37c6c258905673ae11392618a6790b21163a2915c34073a534cb62ad5074a0c5?"
                   className="shrink-0 w-8 aspect-square"
@@ -56,7 +56,7 @@ export default function Footer() {
                   loading="lazy"
                   src="https://cdn.builder.io/api/v1/image/assets/TEMP/b7b22d30d1243051bb008c93f600436e6fa895ad14f6cd9d77c46259d2d84d3a?"
                   className="shrink-0 w-8 aspect-square"
-                />
+                /> */}
               </div>
             </div>
           </div>

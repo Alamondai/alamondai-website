@@ -22,7 +22,9 @@ export default function SectionFour() {
       <div className='w-full mx-auto lg:container grid grid-cols-1 items-center justify-center md:grid-cols-2 gap-10 md:gap-20 py-5 md:py-20 px-5 xl:px-20'>
         {
           developmentApproach.map((items) => (
-            <div className="flex flex-col justify-center max-w-[604px]">
+            <div
+              key={items.id}
+              className="flex flex-col justify-center max-w-[604px]">
               <div className="flex flex-col justify-center px-9 py-12 w-full border border-solid bg-neutral-50 border-zinc-200 max-md:px-5 max-md:max-w-full">
                 <div className="flex gap-5 justify-between max-md:flex-wrap">
                   <div>
