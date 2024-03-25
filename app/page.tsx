@@ -1,8 +1,9 @@
-import SectionFive from "./home/sectionFive";
-import SectionFour from "./home/sectionFour";
-import SectionOne from "./home/sectionOne";
-import SectionThree from "./home/sectionThree";
-import SectionTwo from "./home/sectionTwo";
+import SectionOne from "./home/Section1";
+import SectionTwo from "./home/Section2";
+import SectionThree from "./home/Section3";
+import SectionFour from "./home/Section4";
+import SectionFive from "./home/Section5";
+import SectionSix from "./home/Section6";
 
 export default function Home() {
   return (
@@ -12,8 +13,9 @@ export default function Home() {
       <SectionThree />
       <SectionFour />
       <SectionFive />
-      <div className="h-40">
-      </div>
+      <SectionSix />
+      {/* <div className="h-40">
+      </div> */}
     </main>
   );
 
