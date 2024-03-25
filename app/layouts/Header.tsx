@@ -1,3 +1,4 @@
+"use client"
 import React from 'react';
 import NavLinks from './components/NavLinks';
 import Link from 'next/link';

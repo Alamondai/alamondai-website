@@ -12,10 +12,11 @@ export default function Home() {
       <SectionThree />
       <SectionFour />
       <SectionFive />
-
       <div className="h-40">
-
       </div>
     </main>
   );
+
 }
+
+
