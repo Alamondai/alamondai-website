@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 // Images
 import logo from '../assets/images/logo/logo.png';
@@ -68,7 +69,9 @@ export default function Footer() {
                     <div className="text-xl font-semibold leading-7 text-white">
                       Company
                     </div>
-                    <div className="mt-6">About us</div>
+                    <Link
+                      href={'/about'}
+                      className="mt-6">About us</Link>
                     <div className="mt-3">Blog</div>
                     <div className="mt-3">Contact us</div>
                     <div className="mt-3">Pricing</div>
