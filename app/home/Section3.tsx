@@ -16,16 +16,18 @@ export default function SectionThree() {
         </p>
       </div>
 
-      <div className='w-full h-full flex flex-row items-center justify-center gap-36 py-10'>
+      <div className='w-full h-full flex flex-row items-center justify-center gap-10 md:gap-36 py-10'>
         {client.map((items) => (
-          <div
+          <a
+            target='_blank'
+            href={items.link}
             className='grayscale hover:grayscale-0 transition-main'
             key={items.id}>
             <Image
-              className='w-20'
+              className='w-12 md:w-20'
               src={items.image}
               alt={items.name} />
-          </div>
+          </a>
         ))
         }
 
