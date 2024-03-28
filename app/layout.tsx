@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+
+// Layouts
 import Header from "./layouts/Header";
 import Footer from "./layouts/Footer";
 
@@ -102,6 +104,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en">
       <body className='font-Roboto'>
