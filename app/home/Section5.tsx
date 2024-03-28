@@ -93,12 +93,12 @@ const BackendContent = () => {
   return (
     <div className='w-full h-full flex flex-col gap-5 items-center'>
       {/* Upper Section */}
-      <div className='w-full h-full flex flex-row gap-10 items-center'>
+      <div className='w-full h-full flex flex-row gap-2 md:gap-10 items-center'>
         {
           backendStack1.map(stack => (
-            <div key={stack.id} className='w-40 h-40 flex flex-col gap-2 items-center'>
+            <div key={stack.id} className='w-20 h-auto md:w-40 md:h-40 flex flex-col gap-2 items-center'>
               <Image
-                className='w-44 h-auto'
+                className='w-20 md:w-44 h-auto'
                 src={stack.image}
                 alt={stack.name} />
             </div>
@@ -107,12 +107,12 @@ const BackendContent = () => {
       </div>
 
       {/* Lower Section */}
-      <div className='w-full h-full flex flex-row gap-10 items-center justify-center'>
+      <div className='w-full h-full flex flex-row gap-2 md:gap-10 items-center justify-center'>
         {
           backendStack2.map(stack => (
-            <div key={stack.id} className='w-40 h-40 flex flex-col gap-2 items-end'>
+            <div key={stack.id} className='w-20 h-auto md:w-40 md:h-40 flex flex-col gap-2 items-end'>
               <Image
-                className='w-44 h-auto'
+                className='w-20 md:w-44 h-auto'
                 src={stack.image}
                 alt={stack.name} />
             </div>
@@ -134,10 +134,10 @@ const FrontendContent = () => {
   return (
     <div className='w-full h-full flex flex-col gap-5 items-center'>
       {/* Upper Section */}
-      <div className='w-full h-full flex flex-row gap-10 items-center'>
+      <div className='w-full h-full flex flex-row gap-2 md:gap-10 items-center'>
         {
           frontendStack1.map(stack => (
-            <div key={stack.id} className='w-40 h-40 flex flex-col justify-center gap-2 items-center '>
+            <div key={stack.id} className='w-20 h-auto md:w-40 md:h-40 flex flex-col justify-center gap-2 items-center '>
               <Image
                 className='w-44 h-auto'
                 src={stack.image}
@@ -161,10 +161,10 @@ const DatabasesContent = () => {
   return (
     < div className='w-full h-full flex flex-col gap-5 items-center' >
       {/* Upper Section */}
-      < div className='w-full h-full flex flex-row gap-10 items-center' >
+      < div className='w-full h-full flex flex-row gap-4 md:gap-10 items-center' >
         {
           databaseStack.map(stack => (
-            <div key={stack.id} className='w-40 h-40 flex flex-col justify-center gap-2 items-center '>
+            <div key={stack.id} className='w-20 h-auto md:w-40 md:h-40 flex flex-col justify-center gap-2 items-center '>
               <Image
                 className='w-44 h-auto'
                 src={stack.image}
