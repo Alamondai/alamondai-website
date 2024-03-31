@@ -23,10 +23,14 @@ export default function Page() {
                 textIndent: '2rem'
               }}
               className='text-lg'>
+              {
+                `
               Alamondai is a software business headquartered in Addis Abeba, Ethiopia,
               that specializes in developing new technology solutions.
               We are a committed team of professionals dedicated to making your ideas a reality through great website,
               mobile application, and system software development.
+              `
+              }
             </p>
 
             <p
@@ -34,10 +38,14 @@ export default function Page() {
                 textIndent: '2rem'
               }}
               className='text-lg'>
+              {
+                `
               We don't just develop software; we build partnerships.
               By working closely with our clients, we gain a deep understanding
               of their needs and goals. This collaborative approach allows us to deliver
               custom-built software solutions that exceed expectations and propel businesses forward.
+              `
+              }
             </p>
 
             <p
@@ -45,9 +53,13 @@ export default function Page() {
                 textIndent: '2rem'
               }}
               className='text-lg'>
+              {
+                `
               Our expertise extends beyond traditional software development.
               We offer a comprehensive range of technological products and
               services to cater to your specific requirements.
+                `
+              }
             </p>
           </div>
 
