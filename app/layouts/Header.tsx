@@ -33,7 +33,7 @@ export default function Header() {
 
       {/* Menu */}
       <div className='hidden md:flex w-full flex-row items-center justify-start gap-10'>
-        <NavLinks href="/" exact className="normal-header link-underline hover:line-height-normal">
+        <NavLinks href="/about" exact className="normal-header link-underline hover:line-height-normal">
           About Us
         </NavLinks>
         <NavLinks href="/" exact className="normal-header link-underline hover:line-height-normal">
