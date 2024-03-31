@@ -6,13 +6,13 @@ export default function SectionFour() {
   return (
     <div className='w-full h-full flex flex-col gap-5 bg-[#F7F7FA] py-10'>
       {/* Title */}
-      <div className='w-full flex flex-col gap-8 items-center'>
+      <div className='w-full flex flex-col gap-8 items-center overflow-hidden'>
         <hr className='text-third w-28 border rounded-full h-2 border-third bg-third' />
         <div className='w-full flex flex-col items-center'>
           <p className='text-3xl font-light '>
             Our design and
           </p>
-          <h1 className="self-center text-4xl font-bold text-gray-800 whitespace-nowrap leading-[54.95px]">
+          <h1 className="self-center text-3xl font-bold text-gray-800 whitespace-nowrap leading-[54.95px]">
             development approach
           </h1>
         </div>

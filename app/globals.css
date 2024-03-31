@@ -11,3 +11,7 @@
     @apply text-primary font-bold
   }
 }
+
+* {
+  /* border: 1px solid black; */
+}

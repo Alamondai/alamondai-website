@@ -96,7 +96,7 @@ const BackendContent = () => {
       <div className='w-full h-full flex flex-row gap-2 md:gap-10 items-center'>
         {
           backendStack1.map(stack => (
-            <div key={stack.id} className='w-20 h-auto md:w-40 md:h-40 flex flex-col gap-2 items-center'>
+            <div key={stack.id} className='w-16 xs:w-20 h-auto md:w-40 md:h-40 flex flex-col gap-2 items-center'>
               <Image
                 className='w-20 md:w-44 h-auto'
                 src={stack.image}

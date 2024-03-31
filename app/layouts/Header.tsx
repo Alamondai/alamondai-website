@@ -2,20 +2,41 @@
 import React, { useEffect } from 'react';
 import NavLinks from './components/NavLinks';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation'
+import { usePathname } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 
 // Images
 import logo from '../assets/images/logo/logo.png'
 import Image from 'next/image';
 
+// Icons
+import { CiMenuFries } from "react-icons/ci";
+
+// Shadcn Menu
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+
+
 
 export default function Header() {
+  const router = useRouter();
   const pathname = usePathname();
 
   const headerStyle = pathname ===
     "/service" ?
     "bg-transparent" :
-    "bg-white shadow-lg shadow-gray-100";
+    "bg-white shadow-sm shadow-gray-100";
+
+  const bgStyleServices = pathname ===
+    "/service" ?
+    "bg-white px-4 py-2 rounded-full" :
+    "";
 
   return (
     <header
@@ -24,7 +45,7 @@ export default function Header() {
       <div className='w-full flex flex-row gap-2'>
         <Link
           href={'/'}
-          className='flex flex-row gap-2 items-end bg-white  px-4 py-2 rounded-full'>
+          className={`flex flex-row gap-2 items-end ${bgStyleServices}`}>
           <Image
             className='w-8  h-8'
             // loader={myLoader}
@@ -35,8 +56,8 @@ export default function Header() {
         </Link>
       </div>
 
-      {/* Menu */}
-      <div className='hidden md:flex w-full flex-row items-center justify-start gap-10 bg-white px-4 py-2 rounded-full'>
+      {/* Desktop Menu */}
+      <div className={`hidden md:flex w-full flex-row items-center justify-start gap-10 ${bgStyleServices}`}>
         <NavLinks href="/about" exact className="">
           About Us
         </NavLinks>
@@ -59,7 +80,31 @@ export default function Header() {
         <button className='w-32 py-2 rounded text-white bg-gradient-to-tr from-primary via-secondary to-fourth transition-main'>
           Contact us
         </button>
+      </div>
 
+      {/* Mobile Menu */}
+      <div className={`md:hidden `}>
+        <DropdownMenu>
+          <DropdownMenuTrigger>
+            <CiMenuFries
+              className='w-10 h-auto rounded border border-gray-400 p-1 bg-white'
+            />
+          </DropdownMenuTrigger>
+          <DropdownMenuContent>
+            <DropdownMenuLabel
+              onClick={() => router.push('/')}>
+              Home
+            </DropdownMenuLabel>
+            <DropdownMenuSeparator />
+            <DropdownMenuItem
+              onClick={() => router.push('/about')}>
+              About
+            </DropdownMenuItem>
+            <DropdownMenuItem
+              onClick={() => router.push('/service')}>
+              Services</DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
       </div>
 
     </header>
