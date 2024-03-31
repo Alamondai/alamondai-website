@@ -7,7 +7,7 @@ import aboutImage from '../assets/images/about/about-image.jpg';
 
 export default function Page() {
   return (
-    <main className="w-full h-full min-h-screen flex flex-col gap-10 py-4 md:py-10">
+    <main className="w-full h-full min-h-screen flex flex-col gap-10 py-4 md:py-10 md:pt-28">
       {/* Hero Box Top */}
       <div className='w-full h-full grid grid-cols-1 md:grid-cols-2'>
 

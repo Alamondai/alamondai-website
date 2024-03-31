@@ -1,7 +1,8 @@
 "use client"
-import React from 'react';
+import React, { useEffect } from 'react';
 import NavLinks from './components/NavLinks';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation'
 
 // Images
 import logo from '../assets/images/logo/logo.png'
@@ -9,18 +10,21 @@ import Image from 'next/image';
 
 
 export default function Header() {
+  const pathname = usePathname();
 
-  const myLoader = ({ src, width, quality }: any) => {
-    return `${src}?w=${width}&q=${quality || 75}`
-  }
+  const headerStyle = pathname ===
+    "/service" ?
+    "bg-transparent" :
+    "bg-white shadow-lg shadow-gray-100";
 
   return (
-    <header className='w-full h-20 flex flex-row items-center justify-between px-5 md:px-20 shadow-xl shadow-gray-100'>
+    <header
+      className={`w-full fixed h-20 flex flex-row items-center justify-between gap-5 px-5 md:px-20 z-40 ${headerStyle}`}>
       {/* Logo */}
       <div className='w-full flex flex-row gap-2'>
         <Link
           href={'/'}
-          className='flex flex-row gap-2 items-end'>
+          className='flex flex-row gap-2 items-end bg-white  px-4 py-2 rounded-full'>
           <Image
             className='w-8  h-8'
             // loader={myLoader}
@@ -32,7 +36,7 @@ export default function Header() {
       </div>
 
       {/* Menu */}
-      <div className='hidden md:flex w-full flex-row items-center justify-start gap-10'>
+      <div className='hidden md:flex w-full flex-row items-center justify-start gap-10 bg-white px-4 py-2 rounded-full'>
         <NavLinks href="/about" exact className="">
           About Us
         </NavLinks>

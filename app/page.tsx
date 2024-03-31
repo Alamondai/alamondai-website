@@ -30,7 +30,7 @@ export default function Home() {
   }
 
   return (
-    <main className="w-full h-full flex flex-col gap-10">
+    <main className="w-full h-full flex flex-col gap-10 pt-20">
       <SectionOne />
       <SectionTwo />
       <SectionThree />
