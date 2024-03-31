@@ -77,9 +77,11 @@ export default function Header() {
 
       {/* Contact Button */}
       <div className='hidden md:flex w-auto  h-auto  items-center justify-center'>
-        <button className='w-32 py-2 rounded text-white bg-gradient-to-tr from-primary via-secondary to-fourth transition-main'>
+        <Link
+          href={'/contact'}
+          className='w-32 text-center py-2 rounded text-white bg-gradient-to-tr from-primary via-secondary to-fourth transition-main'>
           Contact us
-        </button>
+        </Link>
       </div>
 
       {/* Mobile Menu */}
