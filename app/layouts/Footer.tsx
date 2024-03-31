@@ -21,7 +21,7 @@ export default function Footer() {
   }
 
   return (
-    <footer className="flex justify-center items-center px-16 py-16 bg-gray-800 max-md:px-5">
+    <footer className="w-full h-full z-50 flex justify-center items-center px-16 py-16 bg-gray-800 max-md:px-5">
       <div className="w-full max-w-[1110px] max-md:max-w-full">
         <div className="flex gap-5 max-md:flex-col max-md:gap-0">
           <div className="flex flex-col w-[37%] max-md:ml-0 max-md:w-full">
@@ -91,8 +91,12 @@ export default function Footer() {
                     </Link>
                     <Link
                       href={'/contact'}
-                      className="mt-3">Contact us</Link>
-                    <div className="mt-3">Pricing</div>
+                      className="mt-3">
+                      Contact us</Link>
+                    <Link
+                      href={'/pricing'}
+                      className="mt-3">
+                      Pricing</Link>
                     <div className="mt-3">Testimonials</div>
                   </div>
                 </div>
@@ -125,6 +129,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-    </footer>
+    </footer >
   )
 }
