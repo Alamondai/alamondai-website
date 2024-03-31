@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 
 export default function NavLinks({ href, exact, children, ...props }: any) {
   const pathname = usePathname();
-  const active = 'text-primary font-bold';
+  const active = 'active-header font-bold';
   // const active = 'text-black font-bold text-xl link-active';
   const isActive = exact ? pathname == href : pathname.startsWith(href)
 

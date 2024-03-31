@@ -8,6 +8,6 @@
   }
 
   .active-header {
-    @apply text-primary
+    @apply text-primary font-bold
   }
 }

@@ -7,22 +7,24 @@ import aboutImage from '../assets/images/about/about-image.jpg';
 
 export default function Page() {
   return (
-    <main className="w-full h-full min-h-screen flex flex-col gap-10 py-10">
+    <main className="w-full h-full min-h-screen flex flex-col gap-10 py-4 md:py-10">
       {/* Hero Box Top */}
       <div className='w-full h-full grid grid-cols-1 md:grid-cols-2'>
-        <div className='w-full h-full flex flex-col items-center justify-start py-5 gap-10'>
+
+        {/* Description */}
+        <div className='w-full h-full flex flex-col items-center justify-start py-5 gap-5 md:gap-10 order-2 md:order-1'>
           {/* Alamondai Name */}
           <div>
-            <h1 className='text-5xl font-bold text-center'>About Us</h1>
+            <h1 className='text-2xl md:text-5xl font-bold text-center'>About Us</h1>
           </div>
 
           {/* Description */}
-          <div className='w-full h-full flex flex-col gap-5 px-11'>
+          <div className='w-full h-full flex flex-col gap-5 px-3 md:px-11'>
             <p
               style={{
                 textIndent: '2rem'
               }}
-              className='text-lg'>
+              className='text-base md:ext-lg'>
               {
                 `
               Alamondai is a software business headquartered in Addis Abeba, Ethiopia,
@@ -37,7 +39,7 @@ export default function Page() {
               style={{
                 textIndent: '2rem'
               }}
-              className='text-lg'>
+              className='text-base md:text-lg'>
               {
                 `
               We don't just develop software; we build partnerships.
@@ -52,7 +54,7 @@ export default function Page() {
               style={{
                 textIndent: '2rem'
               }}
-              className='text-lg'>
+              className='text-base md:text-lg'>
               {
                 `
               Our expertise extends beyond traditional software development.
@@ -62,9 +64,10 @@ export default function Page() {
               }
             </p>
           </div>
-
         </div>
-        <div className='w-full h-full flex items-center justify-center'>
+
+        {/* Image */}
+        <div className='w-full h-full flex items-center justify-center order-1 md:order-2'>
           <Image
             loading="lazy"
             src={aboutImage}

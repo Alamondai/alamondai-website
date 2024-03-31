@@ -5,6 +5,14 @@ import Link from 'next/link';
 // Images
 import logo from '../assets/images/logo/logo.png';
 
+// Icons
+import {
+  FaInstagram,
+  FaLinkedin,
+  FaTwitter,
+  FaYoutube
+} from "react-icons/fa";
+
 export default function Footer() {
 
   function getCurrentYear() {
@@ -37,27 +45,31 @@ export default function Footer() {
               <div className="mt-2 text-sm leading-5 whitespace-nowrap text-slate-100">
                 All rights reserved
               </div>
-              <div className="flex gap-4 pr-20 mt-10 max-md:pr-5">
-                {/* <Image
-                  alt='Facebook'
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/98011fa7b6954b38308ac43b77bed6671caff34918de459957ce80f3efc56180?"
-                  className="shrink-0 w-8 aspect-square"
-                /> */}
-                {/* <img
-                  loading="lazy"
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/37c6c258905673ae11392618a6790b21163a2915c34073a534cb62ad5074a0c5?"
-                  className="shrink-0 w-8 aspect-square"
-                />
-                <img
-                  loading="lazy"
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/918f0713b545abd86ca478c16ba5246d9f6d11b1c6a754deab189831102a7a6e?"
-                  className="shrink-0 w-8 aspect-square"
-                />
-                <img
-                  loading="lazy"
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/b7b22d30d1243051bb008c93f600436e6fa895ad14f6cd9d77c46259d2d84d3a?"
-                  className="shrink-0 w-8 aspect-square"
-                /> */}
+              <div className="flex flex-row items-center gap-5 pr-20 mt-10 max-md:pr-5">
+                <a
+                  target='_blank'
+                  href="https://www.instagram.com/alamondai/">
+                  <FaInstagram
+                    className="text-2xl text-white" />
+                </a>
+                <a
+                  target='_blank'
+                  href="https://www.linkedin.com/company/alamondai/">
+                  <FaLinkedin
+                    className="text-2xl text-white" />
+                </a>
+                <a
+                  target='_blank'
+                  href="https://twitter.com/alamondai/">
+                  <FaTwitter
+                    className="text-2xl text-white" />
+                </a>
+                <a
+                  target='_blank'
+                  href="https://www.youtube.com/@alamondai/">
+                  <FaYoutube
+                    className="text-2xl text-white" />
+                </a>
               </div>
             </div>
           </div>
@@ -101,11 +113,6 @@ export default function Footer() {
                       <div className="flex-auto my-auto">
                         Your email address
                       </div>
-                      <img
-                        loading="lazy"
-                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/8b37f21175b4de389e1b843cbda95f93da233edd19c62fa9d4ac9a37b8de1700?"
-                        className="shrink-0 aspect-square w-[18px]"
-                      />
                     </div>
                   </div>
                 </div>
