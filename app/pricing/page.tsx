@@ -29,8 +29,6 @@ export default function Page() {
             <PricingCard
               key={prices.id}
               {...prices}
-              features1={[]}
-              features2={[]}
             />
           ))
         }

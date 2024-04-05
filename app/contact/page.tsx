@@ -1,9 +1,79 @@
-import React from 'react'
+"use client"
+import React from 'react';
+import { useForm, SubmitHandler } from "react-hook-form";
+import axios from '@/utils/axios';
 
-import { FaPhoneVolume, FaLocationDot, FaInstagram, FaLinkedin, FaTwitter, FaYoutube } from "react-icons/fa6";
-import { MdEmail } from "react-icons/md";
+// Icons
+import {
+  FaPhoneVolume,
+  FaLocationDot,
+  FaInstagram,
+  FaLinkedin,
+  FaTwitter,
+  FaYoutube
+} from "react-icons/fa6";
+import {
+  MdEmail
+} from "react-icons/md";
+import { Bounce, toast } from 'react-toastify';
+
+type Inputs = {
+  firstName: string,
+  lastName: string,
+  email: string,
+  phoneNumber: string,
+  subject: string,
+  message: string
+}
+
 
 export default function Page() {
+
+  const { register, handleSubmit, watch, formState: { errors }, reset } = useForm<Inputs>();
+
+  const onSubmit: SubmitHandler<any> = async (data) => {
+    try {
+      await axios.post('/contact', data)
+        .then((response) => {
+          const status = response.status;
+          if (status == 200) {
+            toast.success('Message Sent Successfully', {
+              position: "top-right",
+              autoClose: 2000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "light",
+              transition: Bounce,
+            });
+            reset();
+          }
+        })
+        .catch((error) => {
+          const status = error.response.status;
+          if (status == 401) {
+            toast.error('All Fields are required', {
+              position: "top-right",
+              autoClose: 2000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "light",
+              transition: Bounce,
+            });
+          }
+        })
+
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+
   return (
     <main className="w-full h-full min-h-screen flex flex-col items-center gap-10 py-28 font-Roboto">
       {/* Contact Us Title */}
@@ -92,8 +162,11 @@ export default function Page() {
           </div>
 
         </div>
+
         {/* Right Side */}
-        <div className='w-full h-full flex flex-col items-center px-4 md:px-10 py-10 gap-10'>
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className='w-full h-full flex flex-col items-center px-4 md:px-10 py-10 gap-10'>
 
           {/* First Name & Last Name */}
           <div className='w-full h-full flex flex-col md:flex-row gap-10'>
@@ -105,8 +178,13 @@ export default function Page() {
               <input
                 type='text'
                 id='first-name'
-                className='w-full h-10 px-2 border-b border-gray-900 focus:outline-none focus:ring-gray-500 '
+                className='w-full h-10 px-2 border-b border-gray-900 focus:outline-none focus:ring-gray-500'
+                {...register("firstName", { required: true })}
+                aria-invalid={errors.firstName ? "true" : "false"}
               />
+              {
+                errors.firstName && <span className='text-red-500 font-light text-sm'>First Name is required</span>
+              }
             </div>
 
             {/* Last name */}
@@ -117,8 +195,13 @@ export default function Page() {
               <input
                 type='text'
                 id='last-name'
-                className='w-full h-10 px-2 border-b border-gray-900 focus:outline-none focus:ring-gray-500 '
+                className='w-full h-10 px-2 border-b border-gray-900 focus:outline-none focus:ring-gray-500'
+                {...register("lastName", { required: true })}
+                aria-invalid={errors.lastName ? "true" : "false"}
               />
+              {
+                errors.lastName && <span className='text-red-500 font-light text-sm'>Last Name is required</span>
+              }
             </div>
           </div>
 
@@ -132,8 +215,13 @@ export default function Page() {
               <input
                 type='text'
                 id='email'
-                className='w-full h-10 px-2 border-b border-gray-900 focus:outline-none focus:ring-gray-500 '
+                className='w-full h-10 px-2 border-b border-gray-900 focus:outline-none focus:ring-gray-500'
+                {...register("email", { required: true })}
+                aria-invalid={errors.email ? "true" : "false"}
               />
+              {
+                errors.email && <span className='text-red-500 font-light text-sm'>Email is required</span>
+              }
             </div>
 
             {/* Phone Number */}
@@ -144,7 +232,8 @@ export default function Page() {
               <input
                 type='text'
                 id='phone-number'
-                className='w-full h-10 px-2 border-b border-gray-900 focus:outline-none focus:ring-gray-500 '
+                className='w-full h-10 px-2 border-b border-gray-900 focus:outline-none focus:ring-gray-500'
+                {...register("phoneNumber")}
               />
             </div>
           </div>
@@ -161,11 +250,12 @@ export default function Page() {
               {/* General */}
               <div className='flex flex-row gap-1 items-center'>
                 <input
+                  defaultChecked
                   type='radio'
                   id='subject'
-                  name='subject'
-                  value={'General'}
+                  value={'general'}
                   className='w-4 h-4'
+                  {...register('subject')}
                 />
                 <label
                   htmlFor='subject'
@@ -177,9 +267,9 @@ export default function Page() {
                 <input
                   type='radio'
                   id='subject'
-                  name='subject'
                   value={'development-request'}
                   className='w-4 h-4'
+                  {...register('subject')}
                 />
                 <label
                   htmlFor='subject'
@@ -191,9 +281,9 @@ export default function Page() {
                 <input
                   type='radio'
                   id='subject'
-                  name='subject'
                   value={'software-testing'}
                   className='w-4 h-4'
+                  {...register('subject')}
                 />
                 <label
                   htmlFor='subject'
@@ -206,18 +296,15 @@ export default function Page() {
                 <input
                   type='radio'
                   id='subject'
-                  name='subject'
                   value={'other'}
                   className='w-4 h-4'
+                  {...register('subject')}
                 />
                 <label
                   htmlFor='subject'
                   className='text-gray-500 font-light text-sm'>Other</label>
               </div>
-
             </div>
-
-
           </div>
 
           {/* Message */}
@@ -228,7 +315,12 @@ export default function Page() {
             <textarea
               id='message'
               className='w-full h-32 px-2 border-b border-gray-900 focus:outline-none focus:ring-gray-500'
+              {...register("message", { required: true })}
+              aria-invalid={errors.message ? "true" : "false"}
             />
+            {
+              errors.message && <span className='text-red-500 font-light text-sm'>Message is required</span>
+            }
           </div>
 
           {/* Send Button */}
@@ -238,10 +330,7 @@ export default function Page() {
               Send
             </button>
           </div>
-
-
-        </div>
-
+        </form>
       </div>
     </main>
   )

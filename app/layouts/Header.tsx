@@ -67,12 +67,15 @@ export default function Header() {
         <NavLinks href="/pricing" exact className="">
           Pricing
         </NavLinks>
-        <NavLinks href="/blog" exact className="">
+        <NavLinks href="/works" exact className="">
+          Our Work
+        </NavLinks>
+        {/* <NavLinks href="/blog" exact className="">
           Blog
         </NavLinks>
         <NavLinks href="/how-it-work" exact className="">
           How it Works
-        </NavLinks>
+        </NavLinks> */}
       </div>
 
       {/* Contact Button */}
@@ -105,6 +108,9 @@ export default function Header() {
             <DropdownMenuItem
               onClick={() => router.push('/service')}>
               Services</DropdownMenuItem>
+            <DropdownMenuItem
+              onClick={() => router.push('/works')}>
+              Our Work</DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
       </div>

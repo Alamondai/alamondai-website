@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import { ToastContainer } from 'react-toastify';
 
 // Layouts
 import Header from "./layouts/Header";
 import Footer from "./layouts/Footer";
 
+// Styles
+import "./globals.css";
+import 'react-toastify/dist/ReactToastify.css';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.alamondai.com/'),
@@ -110,6 +113,7 @@ export default function RootLayout({
       <body className='font-Roboto'>
         <Header />
         {children}
+        <ToastContainer />
         <Footer />
       </body>
     </html>
