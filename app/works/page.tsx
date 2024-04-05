@@ -6,9 +6,9 @@ import WorksCards from './components/WorksCards'
 
 export default function page() {
   return (
-    <div className='w-full h-full min-h-screen flex flex-col gap-2 md:gap-10 items-start justify-start py-28 '>
+    <div className='w-full h-full min-h-screen flex flex-col gap-2 md:gap-10 items-start justify-start pt-28 '>
       {/* Title */}
-      <div className='w-full h-full flex flex-col items-center justify-start gap-5  '>
+      <div className='w-full h-full flex flex-col items-center justify-start gap-5'>
         <div className='w-full h-full text-4xl font-semibold text-third '>
           <h1 className='text-center'>Showcases</h1>
         </div>
@@ -27,6 +27,7 @@ export default function page() {
               description={work.description}
               image={work.image}
               color={work.color}
+              link={work.link}
             />
           ))
         }

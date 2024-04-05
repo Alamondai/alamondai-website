@@ -1,19 +1,24 @@
 import { ArrowRight } from 'lucide-react'
 import Image, { StaticImageData } from 'next/image'
+import Link from 'next/link'
 
 export default function WorksCards({
   name,
   description,
   image,
-  color
+  color,
+  link
 }: {
   name: string,
   description: string,
   image: StaticImageData,
   color: string,
+  link: string
 }) {
   return (
-    <div className='w-full h-full xl:h-96 rounded-xl grid grid-cols-1 xl:grid-cols-5 border cursor-pointer border-gray-300 hover:shadow-xl hover:shadow-gray-300 transition' >
+    <Link
+      href={`/works/pages/${link}`}
+      className='w-full h-full xl:h-96 rounded-xl grid grid-cols-1 xl:grid-cols-5 border cursor-pointer border-gray-300 hover:shadow-xl hover:shadow-gray-300 transition' >
 
       {/* Images */}
       < div className='flex items-center justify-center col-span-3 p-3 md:p-8' >
@@ -47,6 +52,6 @@ export default function WorksCards({
           <ArrowRight />
         </div >
       </div >
-    </div >
+    </Link >
   )
 }
