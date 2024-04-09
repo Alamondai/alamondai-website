@@ -12,7 +12,7 @@ export default function TermsOfServices() {
 
         {/* Primary Text*/}
         <div className='flex flex-col '>
-          <p className='text-base md:text-lg'>These Terms of Service ("Terms") govern your use of our website located at <a className='underline text-primary' href="https://alamondai.com">https://alamondai.com</a> (the "Website") and the services offered by Alamondai (the "Services").
+          <p className='text-base md:text-lg'>These Terms of Service {`("Terms")`} govern your use of our website located at <a className='underline text-primary' href="https://alamondai.com">https://alamondai.com</a> {`(the "Website")`} and the services offered by Alamondai {`(the "Services")`}.
             By accessing or using the Website or Services, you agree to be bound by these Terms.  If you disagree with any part of these Terms, then you may not access or use the Website or Services.</p>
         </div>
 
@@ -55,7 +55,7 @@ export default function TermsOfServices() {
             {/* Disclaimers */}
             <div className='flex flex-col gap-2 text-base md:text-lg'>
               <li className='font-bold'>Disclaimers</li>
-              <p >The Website and Services are provided "as is" and without warranties of any kind, whether express or implied.
+              <p >The Website and Services are provided {`"as is"`} and without warranties of any kind, whether express or implied.
                 Alamondai disclaims all warranties, including, but not limited to, the implied warranties of merchantability, fitness for a particular purpose, and non-infringement.
                 Alamondai does not warrant that the Website or Services will be uninterrupted, secure, or error-free.
                 Alamondai does not warrant that the results that may be obtained from the use of the Website or Services will be accurate or reliable.</p>
@@ -106,7 +106,7 @@ export default function TermsOfServices() {
             <div className='flex flex-col gap-2 text-base md:text-lg'>
               <li className='font-bold'>Contact Us</li>
               <p>If you have any questions about these Terms, please contact us at <a className='underline text-primary' href="mailto:support@alamondai.com.">support@alamondai.com.</a></p>
-              <p>If you want the Company's CEO email: <a className='underline text-primary' href="mailto:nattynengeda@gmail.com">nattynengeda@gmail.com</a></p>
+              <p>If you want the {`Company's`} CEO email: <a className='underline text-primary' href="mailto:nattynengeda@gmail.com">nattynengeda@gmail.com</a></p>
             </div>
 
 

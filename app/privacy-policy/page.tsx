@@ -13,8 +13,8 @@ export default function PrivacyPolicy() {
         {/* Primary Text*/}
         <div className='flex flex-col '>
           <p className='text-base md:text-lg'>Your privacy is important to Alamondai. This Privacy Policy explains how we collect, use,
-            and disclose information from and about you when you use our website located at <a className='underline text-primary' href="https://alamondai.com">https://alamondai.com</a> (the "Website")
-            and the services offered by Alamondai (the "Services").</p>
+            and disclose information from and about you when you use our website located at <a className='underline text-primary' href="https://alamondai.com">https://alamondai.com</a> {`(the "Website")`}
+            and the services offered by Alamondai {`(the "Services")`}.</p>
         </div>
 
         {/* Content */}
@@ -53,7 +53,7 @@ export default function PrivacyPolicy() {
               <p>You have choices regarding your information:</p>
               <ul className='list-disc list-inside px-2'>
                 <li><b>Access and Update Your Information:</b> You can request access to your personal information and update it by contacting us at <a className='underline text-primary' href="mailto:support@alamondai.com">support@alamondai.com</a>.</li>
-                <li><b>Opt-Out of Marketing Communications:</b> You can unsubscribe from our marketing communications by clicking the "unsubscribe" link at the bottom of any email you receive from us.</li>
+                <li><b>Opt-Out of Marketing Communications:</b> {`You can unsubscribe from our marketing communications by clicking the "unsubscribe" link at the bottom of any email you receive from us.`}</li>
               </ul>
             </div>
 
@@ -79,7 +79,7 @@ export default function PrivacyPolicy() {
 
             {/*  Children's Privacy */}
             <div className='flex flex-col gap-2 text-base md:text-lg'>
-              <li className='font-bold'>Children's Privacy</li>
+              <li className='font-bold'>{`Children's Privacy`}</li>
               <p>Our Website and Services are not directed to children under the age of 13. We do not knowingly collect personal information from children under 13.  If you are a parent or guardian and you believe your child has provided us with personal information, please contact us.  We will take steps to remove the information from our systems.</p>
             </div>
 
@@ -99,7 +99,7 @@ export default function PrivacyPolicy() {
             <div className='flex flex-col gap-2 text-base md:text-lg'>
               <li className='font-bold'>Contact Us</li>
               <p>If you have any questions about these Terms, please contact us at <a className='underline text-primary' href="mailto:support@alamondai.com.">support@alamondai.com.</a></p>
-              <p>If you want the Company's CEO email: <a className='underline text-primary' href="mailto:nattynengeda@gmail.com">nattynengeda@gmail.com</a></p>
+              <p>If you want the {` Company's`} CEO email: <a className='underline text-primary' href="mailto:nattynengeda@gmail.com">nattynengeda@gmail.com</a></p>
             </div>
 
           </ul>

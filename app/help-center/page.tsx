@@ -12,8 +12,9 @@ export default function HelpCenter() {
 
         {/* Primary Text*/}
         <div className='flex flex-col '>
-          <p className='text-base md:text-lg'>Welcome to the Alamondai Help Center! We're here to help you get the most out of our products and services.
-            This comprehensive resource center is designed to answer your questions, troubleshoot issues, and guide you through using our platform.</p>
+          <p className='text-base md:text-lg'>{`
+          Welcome to the Alamondai Help Center! We're here to help you get the most out of our products and services.
+          This comprehensive resource center is designed to answer your questions, troubleshoot issues, and guide you through using our platform.`}</p>
         </div>
 
         {/* Category */}
