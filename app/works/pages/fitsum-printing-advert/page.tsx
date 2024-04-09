@@ -126,18 +126,47 @@ export default function FitsumPrintingAdvert() {
                   width={100}
                   height={100}
                   src={"https://i.ibb.co/S6TmYzx/Screenshot-18.png"}
-                  alt="Fitsum Printing & Advert Hopme Page"
+                  alt="Fitsum Printing & Advert Home Page"
                 />
               </div>
             </div>
 
             {/* Mobile Version */}
-            <div className='w-full h-full flex flex-row gap-10'>
+            <div className='w-full h-full grid grid-cols-3 gap-10'>
 
+              {/* Home page */}
+              <div className='w-full h-full rounded-xl border-8 border-thirdborder-8 border-third'>
+                <Image
+                  className='w-full h-full object-fill'
+                  width={100}
+                  height={100}
+                  src={"https://i.ibb.co/Q8bGCfF/Screenshot-20240405-173945-Chrome.jpg"}
+                  alt="Fitsum Printing & Advert Home Page"
+                />
+              </div>
 
+              {/* Gallery page */}
+              <div className='w-full h-full rounded-xl border-8 border-thirdborder-8 border-third'>
+                <Image
+                  className='w-full h-full object-fill'
+                  width={100}
+                  height={100}
+                  src={"https://i.ibb.co/tJfxx5m/Screenshot-20240405-174059-Chrome.jpg"}
+                  alt="Fitsum Printing & Advert Gallery Page"
+                />
+              </div>
+
+              {/* About page */}
+              <div className='w-full h-full rounded-xl border-8 border-thirdborder-8 border-third'>
+                <Image
+                  className='w-full h-full object-fill'
+                  width={100}
+                  height={100}
+                  src={"https://i.ibb.co/SXksLkN/Screenshot-20240405-174046-Chrome.jpg"}
+                  alt="Fitsum Printing & Advert About Page"
+                />
+              </div>
             </div>
-
-
           </div>
 
         </div>
