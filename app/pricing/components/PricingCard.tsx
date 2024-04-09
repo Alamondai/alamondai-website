@@ -19,8 +19,8 @@ export default function PricingCard({
   description: string,
   price: string,
   features: any[],
-  features1: any[],
-  features2: any[]
+  features1?: any[],
+  features2?: any[]
 }) {
   return (
     <div className={`bg-white w-full h-full flex flex-col items-start justify-start gap-20 rounded border border-gray-300 overflow-hidden shadow-sm cursor-pointer hover:shadow-2xl shadow-gray-100 `}>
