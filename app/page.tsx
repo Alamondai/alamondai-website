@@ -37,8 +37,6 @@ export default function Home() {
       <SectionFour />
       <SectionFive />
       <SectionSix />
-      {/* <div className="h-40">
-      </div> */}
     </main>
   );
 

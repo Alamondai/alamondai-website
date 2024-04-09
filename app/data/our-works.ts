@@ -38,17 +38,15 @@ export const works = [
     technologies: ['vue.js', 'tailwindcss'],
     link: "angle-skin"
   },
-  {
-    id: 4,
-    name: "Little Luxury Items",
-    color: "#615B56",
-    image: littleLuxuryItems,
-    imageDescription: "Little Luxury Items Images",
-    url: "https://littleluxuryitems.co/",
-    description: "Little Luxury Items, your destination for unique and innovative products. As an e-commerce store, we are dedicated to providing you with the best selection of high-quality items that add a touch of luxury to your everyday life",
-    technologies: ['shopify'],
-    link: "little-luxury-items"
-  }
-
-
+  // {
+  //   id: 4,
+  //   name: "Little Luxury Items",
+  //   color: "#615B56",
+  //   image: littleLuxuryItems,
+  //   imageDescription: "Little Luxury Items Images",
+  //   url: "https://littleluxuryitems.co/",
+  //   description: "Little Luxury Items, your destination for unique and innovative products. As an e-commerce store, we are dedicated to providing you with the best selection of high-quality items that add a touch of luxury to your everyday life",
+  //   technologies: ['shopify'],
+  //   link: "little-luxury-items"
+  // }
 ];
