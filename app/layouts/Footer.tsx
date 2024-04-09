@@ -81,23 +81,10 @@ export default function Footer() {
                     <div className="text-xl font-semibold leading-7 text-white">
                       Company
                     </div>
-                    <Link
-                      href={'/about'}
-                      className="mt-6">About us</Link>
-                    <Link
-                      href={'/service'}
-                      className="mt-3">
-                      Services
-                    </Link>
-                    <Link
-                      href={'/contact'}
-                      className="mt-3">
-                      Contact us</Link>
-                    <Link
-                      href={'/pricing'}
-                      className="mt-3">
-                      Pricing</Link>
-                    <div className="mt-3">Testimonials</div>
+                    <Link href={'/about'} className="mt-6">About us</Link>
+                    <Link href={'/service'} className="mt-3">Services</Link>
+                    <Link href={'/contact'} className="mt-3">Contact us</Link>
+                    <Link href={'/pricing'} className="mt-3">Pricing</Link>
                   </div>
                 </div>
                 <div className="flex flex-col ml-5 w-[28%] max-md:ml-0 max-md:w-full">
@@ -105,11 +92,11 @@ export default function Footer() {
                     <div className="text-xl font-semibold leading-7 text-white">
                       Support
                     </div>
-                    <div className="mt-6">Help center</div>
-                    <div className="mt-3">Terms of service</div>
-                    <div className="mt-3">Legal</div>
-                    <div className="mt-3">Privacy policy</div>
-                    <div className="mt-3">Status</div>
+                    <Link href={`/help-center`} className="mt-6">Help center</Link>
+                    <Link href={`/terms-of-services`} className="mt-3"> Terms of service</Link>
+                    {/* <Link href={`/legal`} className="mt-3"> Legal</Link> */}
+                    <Link href={`/privacy-policy`} className="mt-3">Privacy policy</Link>
+                    <Link href={`/status`} className="mt-3">Status</Link>
                   </div>
                 </div>
                 <div className="flex flex-col ml-5 w-[44%] max-md:ml-0 max-md:w-full">
@@ -129,6 +116,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-    </footer >
+    </footer>
   )
 }

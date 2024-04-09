@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 // Images
 import heroImage from '../assets/images/home/hero.png';
@@ -17,9 +18,11 @@ export default function SectionOne() {
           <p className='text-light text-sm md:text-base'>We help build and manage a team of world-class developers to bring your vision to life</p>
         </div>
         <div>
-          <button className='px-2 py-2 md:px-5 md:py-3 text-sm md:text-base rounded text-white bg-third'>
+          <Link
+            href={'/pricing'}
+            className='px-2 py-2 md:px-5 md:py-3 text-sm md:text-base rounded text-white bg-third'>
             {"Let's get Started!"}
-          </button>
+          </Link>
         </div>
       </div>
 

@@ -110,7 +110,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className='font-Roboto'>
+      <body className='font-Montserrat scroll-smooth'>
         <Header />
         {children}
         <ToastContainer />

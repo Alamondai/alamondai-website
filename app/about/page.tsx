@@ -12,22 +12,22 @@ export default function Page() {
       <div className='w-full h-full grid grid-cols-1 md:grid-cols-2'>
 
         {/* Description */}
-        <div className='w-full h-full flex flex-col items-center justify-start py-5 gap-5 md:gap-10 order-2 md:order-1'>
+        <div className='w-full h-full flex flex-col items-start md:items-center justify-start py-5 gap-5 md:gap-10 order-2 md:order-1'>
           {/* Alamondai Name */}
-          <div>
+          <div className='px-5 md:px-0'>
             <h1 className='text-2xl md:text-5xl font-bold text-center'>About Us</h1>
           </div>
 
           {/* Description */}
-          <div className='w-full h-full flex flex-col gap-5 px-3 md:px-11'>
+          <div className='w-full h-full flex flex-col gap-5 px-3 md:px-11 text-gray-600'>
             <p
               style={{
-                textIndent: '2rem'
+                // textIndent: '2rem'
               }}
-              className='text-base md:ext-lg'>
+              className='text-base md:text-lg'>
               {
                 `
-              Alamondai is a software business headquartered in Addis Abeba, Ethiopia,
+              Alamondai is a software business headquartered in Addis Ababa, Ethiopia,
               that specializes in developing new technology solutions.
               We are a committed team of professionals dedicated to making your ideas a reality through great website,
               mobile application, and system software development.
@@ -37,7 +37,7 @@ export default function Page() {
 
             <p
               style={{
-                textIndent: '2rem'
+                // textIndent: '2rem'
               }}
               className='text-base md:text-lg'>
               {
@@ -52,7 +52,7 @@ export default function Page() {
 
             <p
               style={{
-                textIndent: '2rem'
+                // textIndent: '2rem'
               }}
               className='text-base md:text-lg'>
               {
