@@ -25,18 +25,18 @@ export const works = [
     url: "https://www.semahmch.com/",
     description: "Semah Mother Child Hospital Website for Online Appointment and Medical Information...",
     technologies: ['reactjs', 'ts', 'nodejs', 'expressjs', 'tailwindcss', 'mysql'],
-    link: ""
+    link: "semah-mch"
   },
   {
     id: 3,
-    name: "Angel SKin",
+    name: "Angel Skin",
     color: '#d5ac89',
     image: angelImage,
     imageDescription: "Angel Skin Image",
     url: "https://angelskinbyangela.com/",
     description: "Angel Skin is U.S. Based Website for Online Appointment for Skin Care and Waxing Solutions...",
     technologies: ['vue.js', 'tailwindcss'],
-    link: " "
+    link: "angle-skin"
   },
   {
     id: 4,
@@ -47,7 +47,7 @@ export const works = [
     url: "https://littleluxuryitems.co/",
     description: "Little Luxury Items, your destination for unique and innovative products. As an e-commerce store, we are dedicated to providing you with the best selection of high-quality items that add a touch of luxury to your everyday life",
     technologies: ['shopify'],
-    link: ""
+    link: "little-luxury-items"
   }
 
 

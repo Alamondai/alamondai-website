@@ -1,10 +1,13 @@
 import React from 'react'
-import { works } from '@/app/data/our-works';
 import Image from 'next/image'
+
+// Data
+import { works } from '@/app/data/our-works';
 import { showIcons } from '@/utils/showIcons';
 
-export default function FitsumPrintingAdvert() {
-  const work = works.find(work => work.id === 1);
+export default function SemahMCH() {
+  const work = works.find(work => work.id === 2);
+
   return (
     <div className='w-full mx-auto h-full min-h-screen md:container flex flex-col gap-10 py-28 px-5 md:px-20'>
 
@@ -35,7 +38,7 @@ export default function FitsumPrintingAdvert() {
           {/* Client */}
           <div className='w-full flex flex-col gap-1 md:gap-3'>
             <h1 className='text-lg font-bold'>Client</h1>
-            <p className='font-light text-gray-500'>Fitsum Printing & Advert</p>
+            <p className='font-light text-gray-500'>{`Semah MCH - Mother Child Hospital`}</p>
           </div>
 
           {/* Technologies */}
@@ -60,9 +63,14 @@ export default function FitsumPrintingAdvert() {
           {/* Overview */}
           <div className='w-full flex flex-col gap-4'>
             <h1 className='w-full text-2xl md:text-3xl font-bold'>Overview</h1>
-            <p className='w-full text-gray-500 md:text-lg '>Fitsum Printing & Advertising P.l.C is a printing & Advertisng company established on 2010 in the heart of Addis Ababa offering the full range of print & Adverting services to a variety of clients operating across many different local & international organizations sectors.
-              We are a one-stop shop for all your printing requirements; our custom- ised solutions are tailored specifically to your individual needs,
-              ensuring the best results every time throughout the prepress, printing, Fnishing and binding process & Advertisng products.</p>
+            <p className='w-full text-gray-500 md:text-lg'>SEMAH MCH Center established thirteen years back in 2010. The center is located in prime
+              location in Addis Ababa, near 22 Mazoria which is accessible, spacious and suitable to
+              provide MCH services. Currently with its 51 human resource capacity, 32 Specialty center
+              professionals and 19 supporting staff (please refer to Annex - I), SEMAH hosts 100-110
+              out-patient clients on a daily basis. In addition to the Out-Patient Department, the
+              center is equipped with other important departments like the major and minor operation
+              theaters, delivery rooms and also emergency and vaccination departments. There are 15
+              beds for in-patient and emergency cases.</p>
           </div>
 
           {/* Features */}
@@ -70,11 +78,11 @@ export default function FitsumPrintingAdvert() {
             <h1 className='w-full text-2xl md:text-3xl font-bold'>Features</h1>
             <p className='w-full text-gray-500 md:text-lg '>
               <ul className='list-disc list-inside'>
-                <li>Customized Solutions</li>
-                <li>Prepress, Printing, Finishing and Binding Process</li>
-                <li>Advertising Products</li>
-                <li>Online Ordering</li>
-                <li>Blog</li>
+                <li>Responsive Website</li>
+                <li>Online Appointments, Online Schedules</li>
+                <li>Blogs</li>
+                <li>Admin Dashboard</li>
+                <li>Feedback Mechanism</li>
               </ul>
             </p>
           </div>
@@ -92,8 +100,8 @@ export default function FitsumPrintingAdvert() {
                   className='w-full h-full object-cover'
                   width={100}
                   height={100}
-                  src={"https://i.ibb.co/F5hGnPY/image-2023-09-21-14-43-42.png"}
-                  alt="Fitsum Printing & Advert Home Page"
+                  src={"https://i.ibb.co/ScXvzDF/Screenshot-11.png"}
+                  alt="Semah MCH Home Page"
                 />
               </div>
 
@@ -103,19 +111,19 @@ export default function FitsumPrintingAdvert() {
                   className='w-full h-full object-cover'
                   width={100}
                   height={100}
-                  src={"https://i.ibb.co/JRHfYZz/Screenshot-17.png"}
-                  alt="Fitsum Printing & Advert About Page"
+                  src={"https://i.ibb.co/TBh8mzh/Screenshot-12.png"}
+                  alt="Semah MCH About Page"
                 />
               </div>
 
-              {/* Gallery Page */}
+              {/* Journal Page */}
               <div className='w-full h-full rounded-xl border-8 border-third overflow-hidden'>
                 <Image
                   className='w-full h-full object-cover'
                   width={100}
                   height={100}
-                  src={"https://i.ibb.co/TrrRnLF/Screenshot-16.png"}
-                  alt="Fitsum Printing & Advert Gallery Page"
+                  src={"https://i.ibb.co/Wzg3Ypr/Screenshot-14.png"}
+                  alt="Semah MCH Journal Page"
                 />
               </div>
 
@@ -125,8 +133,8 @@ export default function FitsumPrintingAdvert() {
                   className='w-full h-full object-cover'
                   width={100}
                   height={100}
-                  src={"https://i.ibb.co/S6TmYzx/Screenshot-18.png"}
-                  alt="Fitsum Printing & Advert Contact Page"
+                  src={"https://i.ibb.co/RDfJLZc/Screenshot-15.png"}
+                  alt="Semah MCH Contact Page"
                 />
               </div>
             </div>
@@ -140,19 +148,19 @@ export default function FitsumPrintingAdvert() {
                   className='w-full h-full object-fill'
                   width={100}
                   height={100}
-                  src={"https://i.ibb.co/Q8bGCfF/Screenshot-20240405-173945-Chrome.jpg"}
-                  alt="Fitsum Printing & Advert Home Page"
+                  src={"https://i.ibb.co/rx55J5C/Screenshot-20240409-112407-Chrome.jpg"}
+                  alt="Semah MCH Home Page"
                 />
               </div>
 
-              {/* Gallery page */}
+              {/* Journal page */}
               <div className='w-full h-full rounded-xl border-8 border-thirdborder-8 border-third'>
                 <Image
                   className='w-full h-full object-fill'
                   width={100}
                   height={100}
-                  src={"https://i.ibb.co/tJfxx5m/Screenshot-20240405-174059-Chrome.jpg"}
-                  alt="Fitsum Printing & Advert Gallery Page"
+                  src={"https://i.ibb.co/M2Jj8PT/Screenshot-20240409-112535-Chrome.jpg"}
+                  alt="Semah MCH Gallery Page"
                 />
               </div>
 
@@ -162,12 +170,13 @@ export default function FitsumPrintingAdvert() {
                   className='w-full h-full object-fill'
                   width={100}
                   height={100}
-                  src={"https://i.ibb.co/SXksLkN/Screenshot-20240405-174046-Chrome.jpg"}
-                  alt="Fitsum Printing & Advert About Page"
+                  src={"https://i.ibb.co/pvnQBc7/Screenshot-20240409-112807-Chrome.jpg"}
+                  alt="Semah MCH About Page"
                 />
               </div>
             </div>
           </div>
+
 
         </div>
       </div>
