@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react'
 
 // Icons
@@ -51,10 +52,11 @@ export default function PricingCard({
 
         {/* Button */}
         <div className='w-full h-full flex items-center justify-center px-20'>
-          <button
-            className='w-full py-3 bg-primary text-white text-lg rounded'>
+          <Link
+            href={`/auth/login`}
+            className='w-full py-3 bg-primary hover:bg-primary text-white text-lg rounded text-center'>
             Buy
-          </button>
+          </Link>
         </div>
 
         {/* Divider */}
