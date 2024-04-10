@@ -53,7 +53,7 @@ export default function PricingCard({
         {/* Button */}
         <div className='w-full h-full flex items-center justify-center px-20'>
           <Link
-            href={`/auth/login`}
+            href={`/contact`}
             className='w-full py-3 bg-primary hover:bg-primary text-white text-lg rounded text-center'>
             Buy
           </Link>
