@@ -9,6 +9,11 @@ import Footer from "./layouts/Footer";
 import "./globals.css";
 import 'react-toastify/dist/ReactToastify.css';
 
+// State
+import { Provider } from "react-redux";
+import { persistor, store } from "./store";
+import { PersistGate } from "redux-persist/integration/react";
+
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.alamondai.com/'),
   icons: {
