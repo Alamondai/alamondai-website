@@ -6,19 +6,21 @@ import {
   InputOTPSeparator,
   InputOTPSlot,
 } from "@/components/ui/input-otp"
-import { REGEXP_ONLY_DIGITS_AND_CHARS } from "input-otp"
 import axios from '@/utils/axios';
+import { REGEXP_ONLY_DIGITS_AND_CHARS } from "input-otp"
 import { BallTriangle } from 'react-loader-spinner';
-import { useSearchParams } from 'next/navigation'
+import { useSearchParams } from 'next/navigation';
+import { Suspense } from 'react';
 import { toast, Bounce } from 'react-toastify';
 import { useRouter } from 'next/navigation';
 
 
-export default function OTP() {
+
+function Page() {
   const [value, setValue] = useState("");
   const [loading, setLoading] = useState(false);
   const router = useRouter();
-  const searchParams = useSearchParams()
+  const searchParams = useSearchParams();
   const email = searchParams.get('email');
 
   const Submit = async () => {
@@ -104,7 +106,6 @@ export default function OTP() {
 
 
   }
-
   return (
     <div className='w-full h-full min-h-screen flex flex-col gap-10 items-center justify-start pt-28 px-5 md:px-0'>
 
@@ -159,5 +160,13 @@ export default function OTP() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function OTP() {
+  return (
+    <Suspense >
+      <Page />
+    </Suspense>
   )
 }

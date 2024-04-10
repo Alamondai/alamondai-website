@@ -7,6 +7,7 @@ import axios from '@/utils/axios';
 import { Bounce, toast } from 'react-toastify';
 import { BallTriangle } from 'react-loader-spinner';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 
 // Types
 type Inputs = {
@@ -54,7 +55,6 @@ export default function Login() {
               transition: Bounce,
             });
           }, 2000);
-
         }
       })
       .catch((error: any) => {
@@ -191,7 +191,7 @@ export default function Login() {
           <button
             // onClick={signInwithGoogle}
             className='w-full flex flex-rows items-center justify-center border border-gray-200 rounded-lg px-2 py-3 gap-2 shadow '>
-            <img
+            <Image
               className='w-5 h-5'
               src={`https://cdn.iconscout.com/icon/free/png-256/free-google-1772223-1507807.png`}
               alt={`Google Image`} />
@@ -201,7 +201,7 @@ export default function Login() {
 
         {/* Don't have an account */}
         <div className='w-full flex flex-row items-center gap-2 justify-center px-5 py-'>
-          Don't have an account?
+          {`Don't have an account?`}
           <Link
             href={`/auth/signup`}
             className='text-third hover:font-semibold'> Signup
