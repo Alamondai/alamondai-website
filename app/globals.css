@@ -12,6 +12,10 @@
   .active-header {
     @apply text-primary font-bold
   }
+
+  .normal-header {
+    @apply text-base text-gray-500 hover:text-primary;
+  }
 }
 
 * {

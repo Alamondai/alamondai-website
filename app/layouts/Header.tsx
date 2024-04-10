@@ -31,7 +31,7 @@ export default function Header() {
   const headerStyle = pathname ===
     "/service" ?
     "bg-transparent" :
-    "bg-white shadow-sm shadow-gray-100";
+    "bg-white shadow-xl shadow-gray-100";
 
   const bgStyleServices = pathname ===
     "/service" ?
@@ -59,7 +59,7 @@ export default function Header() {
       {/* Desktop Menu */}
       <div className={`hidden md:flex w-full flex-row items-center justify-start gap-10 ${bgStyleServices}`}>
         <NavLinks href="/about" exact className="">
-          About Us
+          About
         </NavLinks>
         <NavLinks href="/service" exact className="">
           Services
@@ -68,7 +68,7 @@ export default function Header() {
           Pricing
         </NavLinks>
         <NavLinks href="/works" exact className="">
-          Our Work
+          Work
         </NavLinks>
         {/* <NavLinks href="/blog" exact className="">
           Blog

@@ -1,11 +1,11 @@
 "use client"
-import React from 'react'
+import { useState } from 'react'
 import { Input } from "@/components/ui/input"
-
 import { useForm, SubmitHandler } from "react-hook-form";
 import axios from '@/utils/axios';
-
+import { BallTriangle } from 'react-loader-spinner';
 import { Bounce, toast } from 'react-toastify';
+import { useRouter } from 'next/navigation';
 
 // Types
 type Inputs = {
@@ -17,9 +17,72 @@ type Inputs = {
 
 export default function Signup() {
   const { register, handleSubmit, watch, formState: { errors }, reset } = useForm<Inputs>();
+  const [loading, isLoading] = useState(false);
+  const router = useRouter();
 
   const onSubmit: SubmitHandler<Inputs> = async data => {
+    isLoading(true);
+    await axios.post('/user-auth/signup', data)
+      .then((response) => {
+        const status = response.status;
+        if (status == 200) {
+          isLoading(false);
+          toast.success("OTP Code Sent to Email", {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            transition: Bounce,
+          });
+          router.push(`/auth/otp?email=${data.email}`,);
 
+        }
+      })
+      .catch((error: any) => {
+        const status = error.response.status;
+        isLoading(false);
+        if (status == 402) {
+          toast.error("Fill out the form", {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            transition: Bounce,
+          });
+        } else if (status == 403) {
+          toast.error("User Already Exist", {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            transition: Bounce,
+          });
+        } else {
+          toast.error("Something went wrong", {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            transition: Bounce,
+          });
+        }
+      });
   }
 
   return (
@@ -42,8 +105,10 @@ export default function Signup() {
               <Input
                 type="text"
                 placeholder="Name"
-                {...register("name", { required: true, pattern: /^[a-zA-Z]+$/i })}
-              />
+                {...register("name", { required: true, pattern: /^[a-zA-Z ]+$/i })}
+                aria-invalid={errors.name ? "true" : "false"} />
+              {errors.name?.type == "required" && <span className='text-red-500 text-sm'>This field is required</span>}
+              {errors.name?.type == "pattern" && <span className='text-red-500 text-sm'>Name should Only be Letter</span>}
             </div>
 
             {/* Email */}
@@ -53,10 +118,10 @@ export default function Signup() {
                 type="email"
                 placeholder="Email"
                 {...register("email", { required: true, pattern: /^\S+@\S+$/i })}
-              />
+                aria-invalid={errors.email ? "true" : "false"} />
+              {errors.email?.type == "required" && <span className='text-red-500 text-sm'>This field is required</span>}
+              {errors.email?.type == "pattern" && <span className='text-red-500 text-sm'>Invalid Email</span>}
             </div>
-
-
 
             {/* Password */}
             <div>
@@ -65,17 +130,30 @@ export default function Signup() {
                 type="password"
                 placeholder="Password"
                 {...register("password", { required: true })}
-              />
+                aria-invalid={errors.password ? "true" : "false"} />
+              {errors.password?.type == "required" && <span className='text-red-500 text-sm'>This field is required</span>}
             </div>
           </div>
-
 
           {/* Login Button */}
           <div className='w-full flex justify-center px-5'>
             <button
-              // href={`/dashboard`}
-              className='w-full py-2 bg-third hover:bg-primary text-white text-lg rounded-lg text-center'>
-              Login
+              disabled={loading}
+              className={`w-full py-2 text-white text-lg rounded-lg text-center flex flex-row items-center justify-center gap-3 ${loading ? "bg-gray-400" : "bg-third hover:bg-primary"}`}>
+              {
+                loading
+                  ? <BallTriangle
+                    height={30}
+                    width={30}
+                    radius={5}
+                    color="white"
+                    ariaLabel="ball-triangle-loading"
+                    wrapperStyle={{}}
+                    wrapperClass=""
+                    visible={true}
+                  /> :
+                  <p> Signup</p>
+              }
             </button>
           </div>
 

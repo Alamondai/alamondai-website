@@ -1,10 +1,12 @@
 "use client"
-import React from 'react'
+import { useState } from 'react'
 import { Input } from "@/components/ui/input"
 import Link from 'next/link'
 import { useForm, SubmitHandler } from "react-hook-form";
 import axios from '@/utils/axios';
 import { Bounce, toast } from 'react-toastify';
+import { BallTriangle } from 'react-loader-spinner';
+import { useRouter } from 'next/navigation';
 
 // Types
 type Inputs = {
@@ -14,17 +16,50 @@ type Inputs = {
 
 export default function Login() {
   const { register, handleSubmit, watch, formState: { errors }, reset } = useForm<Inputs>();
+  const [loading, isLoading] = useState(false);
+  const router = useRouter();
+
 
   const onSubmit: SubmitHandler<Inputs> = async data => {
+    isLoading(true);
     await axios.post('/user-auth/login', data)
       .then((response) => {
         const status = response.status;
         if (status == 200) {
+          isLoading(false);
+          toast.success("Login Successful", {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            transition: Bounce,
+          });
+          router.push('/pricing');
+
+          // set a time after 2 seconds to show the toast 
+          setTimeout(() => {
+            toast.info("Choose A Product", {
+              position: "top-right",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: false,
+              draggable: true,
+              progress: undefined,
+              theme: "light",
+              transition: Bounce,
+            });
+          }, 2000);
 
         }
       })
-      .catch((error) => {
+      .catch((error: any) => {
         const status = error.response.status;
+        isLoading(false);
         if (status == 401) {
           toast.error("Fill out the form", {
             position: "top-right",
@@ -51,6 +86,18 @@ export default function Login() {
           });
         } else if (status == 403) {
           toast.error("Incorrect Password", {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            transition: Bounce,
+          });
+        } else {
+          toast.error("Something Went Wrong", {
             position: "top-right",
             autoClose: 2000,
             hideProgressBar: false,
@@ -88,6 +135,7 @@ export default function Login() {
                 placeholder="Email"
                 {...register("email", { required: true, pattern: /^\S+@\S+$/i })}
               />
+
             </div>
             {/* Password */}
             <div>
@@ -111,9 +159,22 @@ export default function Login() {
           {/* Login Button */}
           <div className='w-full flex justify-center px-5'>
             <button
-              // href={`/dashboard`}
-              className='w-full py-2 bg-third hover:bg-primary text-white text-lg rounded-lg text-center'>
-              Login
+              disabled={loading}
+              className={`w-full py-2 text-white text-lg rounded-lg text-center flex flex-row items-center justify-center gap-3 ${loading ? "bg-gray-400" : "bg-third hover:bg-primary"}`}>
+              {
+                loading
+                  ? <BallTriangle
+                    height={30}
+                    width={30}
+                    radius={5}
+                    color="white"
+                    ariaLabel="ball-triangle-loading"
+                    wrapperStyle={{}}
+                    wrapperClass=""
+                    visible={true}
+                  /> :
+                  <p> Login</p>
+              }
             </button>
           </div>
 
