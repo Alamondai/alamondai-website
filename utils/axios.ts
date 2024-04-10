@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL: "http://api.alamondai.com",
+  baseURL: "https://api.alamondai.com",
   timeout: 30000,
   withCredentials: true,
   headers: {
