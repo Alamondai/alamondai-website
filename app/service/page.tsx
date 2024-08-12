@@ -25,27 +25,29 @@ export default function Services() {
         </div>
 
         {/* Services */}
-        <div className='w-full h-full grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-5 md:px-20'>
-          {
-            servicesDetails.map((services) => (
-              <div
-                key={services.id}
-                className='w-full h-auto flex flex-col items-center gap-3 border border-gray-200 py-5 rounded-xl hover:shadow-xl transition-all'>
-                <div >
-                  <Image
-                    className='object-cover w-20 h-20'
-                    src={services.image}
-                    alt={services.name} />
-                </div>
+        <div className='w-full h-full'>
+          <div className='w-full h-full mx-auto 2xl:container grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-5 md:px-20'>
+            {
+              servicesDetails.map((services) => (
+                <div
+                  key={services.id}
+                  className='w-full h-auto flex flex-col items-center gap-3 border border-gray-200 py-5 rounded-xl hover:shadow-xl transition-all'>
+                  <div >
+                    <Image
+                      className='object-cover w-20 h-20'
+                      src={services.image}
+                      alt={services.name} />
+                  </div>
 
-                <div className='w-full h-full flex flex-col gap-5 px-5'>
-                  <h1 className='text-xl font-bold text-center'>{services.name}</h1>
-                  <p className='text-sm text-'>{services.description}</p>
-                </div>
+                  <div className='w-full h-full flex flex-col gap-5 px-5'>
+                    <h1 className='text-xl font-bold text-center'>{services.name}</h1>
+                    <p className='text-sm text-'>{services.description}</p>
+                  </div>
 
-              </div>
-            ))
-          }
+                </div>
+              ))
+            }
+          </div>
         </div>
 
       </div>
